@@ -334,7 +334,7 @@ function desenhar(analise, imagem) {
     const textoY = dY + dH / 2 + 40;
 
     ctx.fillText(`Gerado em: ${dataHoraStr}`, textoX, textoY);
-    ctx.fillText(`Colaborador: ${nomeExibicao}`, textoX, textoY + 30);
+    ctx.fillText('${nomeExibicao}`, textoX, textoY + 30);
   }
   ctx.restore();
 
@@ -480,13 +480,13 @@ $('btnProjetar').addEventListener('click', async () => {
 
   btn.disabled = true;
   btn.textContent = 'Analisando...';
-  out.innerHTML = '<p class="muted">Consultando IA (Groq)...</p>';
+  out.innerHTML = '<p class="muted">Consultando nossa base...</p>';
 
   try {
     const analise = await interpretarPedido(texto);
     console.log('IA retornou:', analise);
 
-    out.innerHTML = '<p class="muted">Buscando imagem no banco...</p>';
+    out.innerHTML = '<p class="muted">Buscando referência...</p>';
     const imagem = await buscarImagem(analise.produto_busca);
 
     desenhar(analise, imagem);
