@@ -334,7 +334,7 @@ function desenhar(analise, imagem) {
     const textoY = dY + dH / 2 + 40;
 
     ctx.fillText(`Gerado em: ${dataHoraStr}`, textoX, textoY);
-    ctx.fillText('${nomeExibicao}`, textoX, textoY + 30);
+    ctx.fillText(`${nomeExibicao}`, textoX, textoY + 30);
   }
   ctx.restore();
 
