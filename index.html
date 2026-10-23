@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orçamentista CDE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img 
+      src="https://casadosespelhos.com.br/wp-content/uploads/2018/05/marca_cde_cores_horizontal_tag_bl-2048x713.png" 
+      alt="Logo Casa dos Espelhos - CDE" 
+      class="header-logo"
+    >
+  </header>
+
+  <!-- Tela de Login (Oculta para testes) -->
+  <div id="telaLogin" style="display: none; align-items: center; justify-content: center; height: 100vh; background: var(--cinza-bg);">
+    <div class="card" style="width: 100%; max-width: 400px;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Acesso PDI CDE</h2>
+      <input type="email" id="loginEmail" placeholder="E-mail corporativo" style="width: 100%; padding: 12px; margin-bottom: 10px; border: 1.5px solid var(--borda); border-radius: 8px;">
+      <input type="password" id="loginSenha" placeholder="Senha" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1.5px solid var(--borda); border-radius: 8px;">
+      <button id="btnLogin" class="btn" style="width: 100%;">Entrar</button>
+      <p id="loginErro" style="color: var(--vermelho-erro); font-size: 12px; text-align: center; margin-top: 10px;"></p>
+    </div>
+  </div>
+
+  <!-- Aplicação Principal -->
+  <main id="appPrincipal">
+    <!-- BLOCO 1: PEDIDO -->
+    <section class="card" id="bloco-pedido">
+      <h2>1. Descrição do Pedido</h2>
+      
+      <!-- Botões de Modelos Rápidos -->
+      <div class="templates">
+        <span>Alguns Modelos:</span>
+        <button type="button" class="tag" data-template="box">Box Banheiro</button>
+        <button type="button" class="tag" data-template="porta_correr">Porta de Correr</button>
+        <button type="button" class="tag" data-template="porta_pivotante">Porta Pivotante</button>
+        <button type="button" class="tag" data-template="janela">Janela de Correr</button>
+      </div>
+
+      <textarea id="pedido" placeholder="Descreva o produto e as medidas..."></textarea>
+      
+      <!-- Campo para Atribuir ao Vendedor -->
+      <div class="vendedor-box">
+        <label for="vendedor">Vendedor/Orçamentista:</label>
+        <input type="text" id="vendedor" placeholder="Nome do vendedor (opcional)">
+      </div>
+
+      <button class="btn" id="btnProjetar">🎨 Projetar Esboço</button>
+    </section>
+
+    <!-- BLOCO 2: ANÁLISE -->
+    <section class="card" id="bloco-analise">
+      <h2>2. Detalhes Técnicos:</h2>
+      <div id="analise" class="analise">
+        <p class="muted">Aguardando...</p>
+      </div>
+    </section>
+
+    <!-- BLOCO 3: DESENHO -->
+    <section class="card canvas-wrap" id="bloco-desenho">
+      <h2>3. Desenho</h2>
+      <div id="canvasArea" class="canvas-area">
+        <div id="placeholder" class="placeholder">
+          <div class="icone">📐</div>
+          <p>Área do Desenho</p>
+        </div>
+        <canvas id="canvas" style="display:none"></canvas>
+      </div>
+      <div class="acoes">
+        <button id="btnBaixar" class="btn sec" disabled>⬇ Baixar PNG</button>
+        <button id="btnLimpar" class="btn sec" disabled>🗑 Limpar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Desenvolvido para a <strong>CDE</strong> • 2026
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
