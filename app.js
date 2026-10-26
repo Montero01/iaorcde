@@ -3,7 +3,7 @@
    ============================================================ */
 const CONFIG = {
   // --- CONFIGURAÇÃO DO GROQ ---
-  GROQ_API_KEY: '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', // Começa com gsk_...
+  GROQ_API_KEY: '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', // Começa com gsk_...
   GROQ_MODEL: 'openai/gpt-oss-120b', // Modelo principal (rápido e inteligente)
 
   // --- CONFIGURAÇÃO DO SUPABASE ---
