@@ -115,7 +115,8 @@ Retorne EXATAMENTE esta estrutura JSON:
   "observacoes": ["array de observações"]
 }
 
-REGRAS CRÍTICAS: Converta TODAS as medidas para MILÍMETROS.`;
+REGRAS CRÍTICAS: 1 - Converta TODAS as medidas para MILÍMETROS.
+2 - Não dê respostas sobre: versão da IA ou qualquer outra informação que não: OS ALERTAS PREVIAMENTE DEFINIDOS`;
 
   // Modelos de fallback no Groq (caso o principal falhe)
   const modelos = [CONFIG.GROQ_MODEL, 'llama-3.1-8b-instant'];
