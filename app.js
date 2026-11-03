@@ -2,10 +2,11 @@
    CONFIGURAÇÃO — edite aqui
    ============================================================ */
 const CONFIG = {
-  // --- CONFIGURAÇÃO DO GROQ ---
-  GROQ_API_KEY: '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', // Começa com gsk_...
-  GROQ_MODEL: 'openai/gpt-oss-120b', // Modelo principal (rápido e inteligente)
-
+// --- CONFIGURAÇÃO DO GROQ ---
+  GROQ_API_KEY: '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', // Começa com gsk_...
+  GROQ_MODEL: 'openai/gpt-oss-20b', // Modelo principal, rápido e gratuito
+  GROQ_FALLBACK_MODEL: 'openai/gpt-oss-120b', // Reserva, para raciocínios mais complexos
+  // ... resto da configuração
   // --- CONFIGURAÇÃO DO SUPABASE ---
   SUPABASE_URL: 'https://ojurjfpbqqibozkzfnfl.supabase.co',   // ← cole aqui
   SUPABASE_ANON_KEY: 'sb_publishable_LPsMuaPlRAihRc3AYgobXg_a50VZL6U', // ← cole aqui
