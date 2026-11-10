@@ -3,7 +3,7 @@
    ============================================================ */
 const CONFIG = {
 // --- CONFIGURAÇÃO DO GROQ ---
-  GROQ_API_KEY: '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', // Começa com gsk_...
+  GROQ_API_KEY: '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', // Começa com gsk_...
   GROQ_MODEL: 'openai/gpt-oss-20b', // Modelo principal, rápido e gratuito
   GROQ_FALLBACK_MODEL: 'openai/gpt-oss-120b', // Reserva, para raciocínios mais complexos
   // ... resto da configuração
